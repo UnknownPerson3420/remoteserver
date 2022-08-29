@@ -9,10 +9,10 @@ app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
-  res.sendFile('/src/home.html');
+  res.sendFile('home.html');
 });
 app.get('/login', (req, res) => {
-  res.sendFile('/src/login.html');
+  res.sendFile('login.html');
 });
 app.listen(port, () => {
   console.log(`Example app listening at https://usmc.up.railway.app/`);

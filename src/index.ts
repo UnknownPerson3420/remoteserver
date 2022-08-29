@@ -9,9 +9,11 @@ app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
-  res.send("Testing123");
+  res.sendFile(__dirname + '/home.html');
 });
-
+app.get('/login', (req, res) => {
+  res.sendFile(__dirname + '/login.html');
+});
 app.listen(port, () => {
   console.log(`Example app listening at https://expressjs-production-9521.up.railway.app/`);
 });

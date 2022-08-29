@@ -13,10 +13,10 @@ app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
-  res.sendFile('home.html');
+  res.sendFile('./src/home.html');
 });
 app.get('/login', (req, res) => {
-  res.sendFile('login.html');
+  res.sendFile('./src/login.html');
 });
 app.post('/login', (req, res) => {
   let username = req.body.username;

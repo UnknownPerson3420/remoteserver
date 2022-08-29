@@ -15,5 +15,5 @@ app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/src/login.html');
 });
 app.listen(port, () => {
-  console.log(`Example app listening at https://expressjs-production-9521.up.railway.app/`);
+  console.log(`Example app listening at https://usmc.up.railway.app/`);
 });

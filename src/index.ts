@@ -4,6 +4,10 @@ import express from "express";
 const app = express();
 const port = 3000;
 
+app.listen(port, () => {
+  console.log(`Example app listening at https://usmc.up.railway.app/`);
+});
+
 app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
@@ -19,6 +23,4 @@ app.post('/login', (req, res) => {
   let password = req.body.password;
   res.send(`Username: ${username} Password: ${password}`);
 });
-app.listen(port, () => {
-  console.log(`Example app listening at https://usmc.up.railway.app/`);
-});
+
